@@ -1,7 +1,7 @@
 from fastapi import HTTPException, status
-from instagram.routers.schema import PostBase
+from app.routers.schema import PostBase
 from sqlalchemy.orm.session import Session
-from instagram.db.models import DbPost
+from app.db.models import DbPost
 import datetime
 
 

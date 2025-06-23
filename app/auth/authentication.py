@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security.oauth2 import OAuth2PasswordRequestForm
-from instagram.db.database import get_db
+from app.db.database import get_db
 from sqlalchemy.orm.session import Session
-from instagram.db.models import DbUser
-from instagram.db.hashing import Hash
-from instagram.auth.oauth2 import create_access_token
+from app.db.models import DbUser
+from app.db.hashing import Hash
+from app.auth.oauth2 import create_access_token
 
 router = APIRouter(
   tags=['authentication']

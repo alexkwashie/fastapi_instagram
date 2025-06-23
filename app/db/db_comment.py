@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy.orm import Session
-from instagram.db.models import DbComment
-from instagram.routers.schema import CommentBase
+from app.db.models import DbComment
+from app.routers.schema import CommentBase
 
 
 def create(db: Session, request: CommentBase):

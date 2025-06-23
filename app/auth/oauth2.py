@@ -4,8 +4,8 @@ from datetime import datetime, timedelta
 from jose import jwt, JWTError
 from fastapi import HTTPException, Depends, status
 from sqlalchemy.orm import Session
-from instagram.db.database import get_db
-from instagram.db import db_user
+from app.db.database import get_db
+from app.db import db_user
 import os
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")

@@ -1,12 +1,12 @@
 from os import name
 from fastapi import FastAPI
 from sqlalchemy.sql.functions import user
-from instagram.db import models
-from instagram.db.database import engine, get_db
+from app.db import models
+from app.db.database import engine, get_db
 from fastapi import Depends
-from instagram.routers import comment, user, post
+from app.routers import comment, user, post
 from fastapi.staticfiles import StaticFiles
-from instagram.auth import authentication
+from app.auth import authentication
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -39,4 +39,4 @@ app.add_middleware(
 
 models.Base.metadata.create_all(bind=engine)
 
-app.mount('/images', StaticFiles(directory='instagram/images'), name='images')
+app.mount('/images', StaticFiles(directory='app/images'), name='images')

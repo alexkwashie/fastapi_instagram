@@ -1,8 +1,8 @@
 from sqlalchemy.orm.session import Session
-from instagram.routers.schema import UserBase, UserDisplay
+from app.routers.schema import UserBase, UserDisplay
 from fastapi import APIRouter, Depends
-from instagram.db.database import get_db
-from instagram.db import db_user
+from app.db.database import get_db
+from app.db import db_user
 
 router = APIRouter(
   prefix='/user',

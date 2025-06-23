@@ -1,9 +1,9 @@
-from instagram.routers.schema import CommentBase, UserAuth
+from app.routers.schema import CommentBase, UserAuth
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from instagram.db.database import get_db
-from instagram.db import db_comment
-from instagram.auth.oauth2 import get_current_user
+from app.db.database import get_db
+from app.db import db_comment
+from app.auth.oauth2 import get_current_user
 
 router = APIRouter(
   prefix='/comment',

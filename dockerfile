@@ -6,7 +6,7 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./instagram ./instagram
+COPY ./app ./app
 
 ENV PYTHONPATH=/fastapi_instagram
-CMD ["uvicorn", "instagram.main:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]

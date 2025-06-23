@@ -1,15 +1,15 @@
-from instagram.auth.oauth2 import get_current_user
+from app.auth.oauth2 import get_current_user
 from fastapi import APIRouter, Depends, status, UploadFile, File
 from fastapi.exceptions import HTTPException
 from sqlalchemy.orm import Session
-from instagram.routers.schema import PostBase, PostDisplay
-from instagram.db.database import get_db
-from instagram.db import db_post
+from app.routers.schema import PostBase, PostDisplay
+from app.db.database import get_db
+from app.db import db_post
 from typing import List
 import random
 import string
 import shutil
-from instagram.routers.schema import UserAuth
+from app.routers.schema import UserAuth
 
 
 router = APIRouter(

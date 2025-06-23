@@ -1,8 +1,8 @@
 from fastapi import HTTPException, status
-from instagram.db.models import DbUser
-from instagram.routers.schema import UserBase
+from app.db.models import DbUser
+from app.routers.schema import UserBase
 from sqlalchemy.orm.session import Session
-from instagram.db.hashing import Hash
+from app.db.hashing import Hash
 
 def create_user(db: Session, request: UserBase):
   new_user = DbUser(
