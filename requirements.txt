@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sqlalchemy
+bcrypt
+python-multipart
+aiofiles
+python-jose
+passlib[bcrypt]
+python-multipart
+aiofiles
